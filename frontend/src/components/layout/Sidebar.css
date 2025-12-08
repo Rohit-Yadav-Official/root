@@ -1,0 +1,225 @@
+/* this is for-Sidebar Container */
+.sidebar {
+  width: 220px;
+  min-height: 100%;
+  background-color: #F3F3F3;
+  border-right: 1px solid #e5e7eb;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'IBM Plex Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+/* this is for-Profile Section */
+.sidebar-profile {
+  width: 188px;
+  height: 49px;
+  padding: 4px 16px;
+  margin: 4px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.sidebar-profile:hover {
+  background-color: #f9fafb;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.profile-info { flex: 1; }
+
+.profile-name {
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+}
+
+.profile-subtitle {
+  font-weight: 400;
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.profile-chevron {
+  color: #9ca3af;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+/*this is for- Navigation Section */
+.sidebar-nav {
+  width: 188px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+}
+
+/* this is fr-Standard Menu Item */
+.menu-item {
+  width: 100%;
+  height: 24px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  /* transition: background 0.2s ease; */
+  box-sizing: border-box;
+}
+
+.menu-item:hover {
+  background: #f3f4f6;
+}
+
+.menu-item-text {
+  font-weight: 400;
+  font-size: 13px;
+  color: #515162;
+  line-height: 19.5px;
+}
+
+/* Expandable Section Wrapper */
+.services,
+.invoices {
+  width: 188px;
+  background: white;
+  padding: 8px 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Expandable Menu Item */
+.menu-item-expandable {
+  width: 100%;
+  height: 24px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  color: #4b5563;
+  font-size: 13px;
+  cursor: pointer;
+  /* transition: background 0.2s ease; */
+  box-sizing: border-box;
+}
+
+.menu-item-expandable:hover {
+  background-color: #f3f4f6;
+}
+
+.menu-item-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expand-icon {
+  color: #9ca3af;
+  transition: transform 0.2s ease;
+}
+
+.menu-item-expandable.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Submenu container */
+.submenu {
+  width: 100%;
+  background: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+
+.submenu.open {
+  max-height: 500px;
+  padding-left: 12px;
+  background: white;
+}
+
+.submenu-item {
+  width: 100%;           /* Full width so text does not wrap */
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;    /* 🔥 prevents text from wrapping */
+  overflow: hidden;       /* prevent breaking layout */
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+.submenu-item:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.submenu-item.active {
+  font-weight: 600;
+  color: #000;
+}
+
+/* Icon inside submenu */
+.submenu-icon {
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+}
+
+.submenu-item:hover .submenu-icon {
+  color: #6b7280;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .sidebar-nav,
+  .sidebar-profile {
+    width: 100%;
+  }
+}
