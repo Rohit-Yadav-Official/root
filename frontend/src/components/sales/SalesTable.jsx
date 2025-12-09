@@ -35,12 +35,16 @@ export default function SalesTable({ filters, onPageChange }) {
             <th>Transaction ID</th>
             <th>Date</th>
             <th>Customer ID</th>
-            <th>Customer name</th>
+            <th>Customer Name</th>
             <th>Phone Number</th>
             <th>Gender</th>
             <th>Age</th>
             <th>Product Category</th>
             <th>Quantity</th>
+            <th>Total Amount</th>
+            <th>Customer Region</th>
+            <th>Product ID</th>
+            <th>Employee Name</th>
           </tr>
         </thead>
 
@@ -54,8 +58,7 @@ export default function SalesTable({ filters, onPageChange }) {
               <td>
                 <div className="phone-number-cell">
                   {row.phone}
-                  <svg className="copy-icon" viewBox="0 0 24 24" fill="none"
-                       stroke="currentColor" strokeWidth="2">
+                  <svg className="copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="9" y="9" width="13" height="13" rx="2"></rect>
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9"></path>
                   </svg>
@@ -64,7 +67,11 @@ export default function SalesTable({ filters, onPageChange }) {
               <td>{row.gender}</td>
               <td>{row.age}</td>
               <td>{row.category}</td>
-              <td>{row.quantity}</td>
+              <td className="highlight">{row.quantity}</td>
+              <td className="highlight">{row.totalAmount}</td>
+              <td className="highlight">{row.customerRegion}</td>
+              <td className="highlight">{row.productId}</td>
+              <td className="highlight">{row.employeeName}</td>
             </tr>
           ))}
         </tbody>

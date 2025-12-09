@@ -48,6 +48,10 @@ export function useSales(filters) {
           age: row.age,
           category: row.productCategory ?? row.category,
           quantity: row.quantity,
+          totalAmount: row.totalAmount ?? 0,        
+          customerRegion: row.customerRegion ?? "", 
+          productId: row.productId ?? "",          
+          employeeName: row.employeeName ?? "",     
         }));
 
         setData(mapped);
