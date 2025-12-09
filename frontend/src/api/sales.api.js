@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3034/api",
+  baseURL: "https://root-production-88c0.up.railway.app/api",
 });
 
 export const getSales = async (filters = {}) => {
