@@ -8,6 +8,7 @@
 /* Table Styling */
 .sales-table {
   width: 100%;
+  margin-left: 10px;
   border-collapse: collapse;
   font-family: 'IBM Plex Sans', sans-serif;
   min-width: 1400px; /* ensures table is wide enough for all 13 columns */
